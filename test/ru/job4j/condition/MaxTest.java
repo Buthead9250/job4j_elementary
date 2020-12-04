@@ -13,14 +13,20 @@ public class MaxTest {
     }
 
     @Test
-    public void whenMax9To2Then9() {
-        int result = Max.max(9, 2);
-        assertThat(result, is(9));
+    public void whenMax9To2To14Then14() {
+        int result = Max.max(9, 2, 14);
+        assertThat(result, is(14));
     }
 
     @Test
     public void whenMax13To13Then13() {
         int result = Max.max(13, 13);
         assertThat(result, is(13));
+    }
+
+    @Test
+    public void whenMax13To8To29To1Then29() {
+        int result = Max.max(13, 9, 29, 1);
+        assertThat(result, is(29));
     }
 }
