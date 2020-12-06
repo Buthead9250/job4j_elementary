@@ -1,6 +1,7 @@
 package ru.job4j.condition;
 
 import org.junit.Assert;
+import static org.junit.Assert.assertEquals;
 import static org.hamcrest.Matchers.is;
 import org.junit.Test;
 
@@ -31,5 +32,13 @@ public class PointTest {
         // Point point = new Point();
         double result = a.distance(b);
         Assert.assertThat(result, is(3.605551275463989));
+    }
+
+    @Test
+    public void thenPoint3DWhen() {
+        Point a = new Point(1, 1, 1);
+        Point b = new Point(2, 3, 4);
+        double result = a.distance3d(b);
+        assertEquals(result, 3.74D, 0.01);
     }
 }
