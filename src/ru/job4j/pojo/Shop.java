@@ -5,7 +5,7 @@ public class Shop {
         int rsl = -1;
         for (int i = 0; i < products.length; i++) {
             Product product = products[i];
-            if (products[i].equals(null)) {
+            if (products[i] == null) {
                 rsl = i;
                 break;
             }
